@@ -18,5 +18,13 @@
     </div>
     <h1>Hello World!</h1>
     <p>This content is visible to users, unlike the head section.</p>
+    <script>
+      document.getElementById("date-selector").addEventListener("change", (event) => {
+        if (event.target.value) {
+          window.location.href =
+            `posts.html?date=${encodeURIComponent(event.target.value)}`;
+        }
+      });
+    </script>
 </body>
 </html>
